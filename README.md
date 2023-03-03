@@ -1,33 +1,24 @@
-# TÍTULO DO PROJETO
+# LangSocials
 
-`CURSO`
+`Análise e desenvolvimento de sistemas`
 
-`DISCIPLINA`
+`Eixo 2 - Projeto: Desenvolvimento de uma Aplicação Interativa`
 
-`SEMESTRE`
+`2023.1`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Aplicação para conectar estabelecimentos interessados e praticantes de conversação de linguas estrangeiras, permitindo encontros mutualmente benéficos.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Luiz Eduardo de Jesus Santana
+* Adeilton Farias Rodrigues Junior
+* Gustavo Henrique de Jesus Almeida
+* Carlos Alberto Mendonça Vasconselos
+* Pedro Rafael da Cruz Almeida
 
 ## Orientador
 
-* Nome completo do professor 1
-
-## Instruções de utilização
-
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
-
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
-
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
-
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+* Daniela Carvalho Monteiro Ferreira
 
 # Documentação
 
@@ -54,3 +45,13 @@ O link e o usuário/senha descritos acima são apenas exemplos de como tais info
 # Apresentação
 
 <li><a href="presentation/README.md"> Apresentação da solução</a></li>
+
+## Instruções de utilização
+
+Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+
+Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+
+Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
+
+O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
