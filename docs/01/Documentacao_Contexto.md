@@ -28,6 +28,10 @@ De forma mais específica, pretendemos criar funcionalidades que permitam uma pe
 
 Além disso, será previsto um local para cadastro de estabelecimentos interessados em receber esse tipo de encontro, facilitando tanto a busca desses locais pelos organizadores quanto o contato entre as partes.
 
+## Justificativa
+
+O problema afetou pessoalmente membros do grupo, que sentiram falta de um canal especifico para o assunto. 
+
 ## Público-Alvo
 
 O foco deste trabalho está no público envolvido de alguma forma a atividades de prática de línguas através de encontros para conversação.
