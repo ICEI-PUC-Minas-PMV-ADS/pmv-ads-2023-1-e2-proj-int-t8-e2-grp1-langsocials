@@ -27,3 +27,13 @@ Para facilitar a organização dos encontros poliglotas e facilitar a busca de i
 De forma mais específica, pretendemos criar funcionalidades que permitam uma pesquisa mais eficiente, onde o usuário possa localizar o evento na cidade em que se encontra ou por proximidade a um endereço/localização, por idioma específico ou até mesmo por tipo de estabelecimento.
 
 Além disso, será previsto um local para cadastro de estabelecimentos interessados em receber esse tipo de encontro, facilitando tanto a busca desses locais pelos organizadores quanto o contato entre as partes.
+
+## Público-Alvo
+
+O foco deste trabalho está no público envolvido de alguma forma a atividades de prática de línguas através de encontros para conversação.
+
+Identificamos, desta forma, x perfis que serão beneficiados pelo projeto:
+
+1. Em primeiro lugar, o usuário interessado em encontrar e participar dos encontros poliglotas. Estabelecemos aqui um perfil de homens e mulheres com idade a partir de 17 anos, pressupondo que pessoas nessa idade já têm maturidade e independência o bastante para procurarem esse tipo de atividade. São pessoas que já possuem algum conhecimento de outra língua e têm familiaridade com uso de aplicativos sociais ou fazem uso de internet de alguma forma para busca de informações diversas.
+2. Em seguida, está o grupo de pessoas que organizam esses eventos. Identificamos aqui principalmente professores de línguas independentes, Clubes de Poliglotas e escolas de idiomas que promovem gratuitamente esse tipo de atividade. 
+3. Outro público que deve ser considerado é o de estabelecimentos que podem aproveitar-se desse tio de evento para aumentar seu movimento e publicidade. A ideia é poderem se cadastrar para oferecer seu espaço para os encontros, com a indicação de horários disponíveis e com regras combinadas com os organizadores.
