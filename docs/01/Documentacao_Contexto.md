@@ -13,3 +13,9 @@ Como apontado acima, os Clubes formados contam com redes sociais como WhatsApp, 
 Para facilitar a organização desses grupos colaborativos, dar maior publicidade aos seus eventos e facilitar o acesso a pessoas interessadas, é interessante que se crie uma aplicação ou canal dedicado a esse tipo de atividade, que possa centralizar as informações das comunidades espalhadas pelo Brasil e pelo Mundo.
 
 Nosso objetivo é facilitarmos a organização e divulgação das comunidades dedicadas a prática de idiomas. Dessa forma, pretendemos auxiliar na popularização dessas comunidades e impulsionar o acesso da população ao aprendizado e fluência em outras línguas.
+
+## Problema
+
+O problema que pretendemos atacar com nosso projeto é a dificuldade de acesso, por pessoas interessadas, a atividades gratuitas de conversação de línguas estrangeiras. Conforme apontado acima, atividades práticas de conversação são fundamentais para a fixação do aprendizado de uma língua não nativa e atingimento da fluência e, muitas vezes, os exercícios propostos em sala de aula não são suficientes. Além disso, existem muitas pessoas que já têm algum domínio da língua e não estão dispostos a matricular-se em cursinhos ou até mesmo aqueles que simplesmente não podem pagar por eles. 
+
+Existem pelo mundo vários grupos voluntários que promovem encontros poliglotas abertos ao público em geral, porém sua divulgação muitas vezes não chega aos interessados por não conhecerem exatamente onde podem encontrá-la, visto que é feita através de diversos canais de comunicação não dedicados exclusivamente ao assunto.
