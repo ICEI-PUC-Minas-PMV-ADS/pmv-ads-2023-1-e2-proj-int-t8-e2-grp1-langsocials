@@ -19,3 +19,11 @@ Nosso objetivo é facilitarmos a organização e divulgação das comunidades de
 O problema que pretendemos atacar com nosso projeto é a dificuldade de acesso, por pessoas interessadas, a atividades gratuitas de conversação de línguas estrangeiras. Conforme apontado acima, atividades práticas de conversação são fundamentais para a fixação do aprendizado de uma língua não nativa e atingimento da fluência e, muitas vezes, os exercícios propostos em sala de aula não são suficientes. Além disso, existem muitas pessoas que já têm algum domínio da língua e não estão dispostos a matricular-se em cursinhos ou até mesmo aqueles que simplesmente não podem pagar por eles. 
 
 Existem pelo mundo vários grupos voluntários que promovem encontros poliglotas abertos ao público em geral, porém sua divulgação muitas vezes não chega aos interessados por não conhecerem exatamente onde podem encontrá-la, visto que é feita através de diversos canais de comunicação não dedicados exclusivamente ao assunto.
+
+## Objetivos
+
+Para facilitar a organização dos encontros poliglotas e facilitar a busca de interessados, propomos a criação de um Aplicativo onde os grupos podem cadastrar as atividades programadas, criando uma agenda que ficará disponível para consulta de qualquer usuário.
+
+De forma mais específica, pretendemos criar funcionalidades que permitam uma pesquisa mais eficiente, onde o usuário possa localizar o evento na cidade em que se encontra ou por proximidade a um endereço/localização, por idioma específico ou até mesmo por tipo de estabelecimento.
+
+Além disso, será previsto um local para cadastro de estabelecimentos interessados em receber esse tipo de encontro, facilitando tanto a busca desses locais pelos organizadores quanto o contato entre as partes.
