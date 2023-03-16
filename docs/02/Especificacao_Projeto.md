@@ -29,3 +29,26 @@ As personas levantadas durante o processo de entendimento do problema são apres
   </tr>
 </tbody>
 </table>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky" rowspan="2">
+      <img src="./Persona2_Cibele_Monteiro.jpg" width="272" height="275">
+    </th>
+    <th class="tg-pie6" colspan="2"><span style="font-weight:bold">Cibele Monteiro</span></th>
+  </tr>
+  <tr>
+    <th class="tg-0pky">●Idade: 28 anos<br><br> ●Ocupação: professora de inglês.</th>
+    <th class="tg-0pky">●Entra no Omegle para conversar com pessoas estrangeiras <br> ●Encontros com amigos e turmas <br>●Estadunidense que precisa praticar o português </th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">●Motivação:<br> 
+        &emsp; ●	Ajudar pessoas a aprender inglês
+    <td class="tg-0pky">●Objetivo: <br>&emsp;●Formar grupos de conversação de inglês <br>&emsp;●Encontrar pessoas para conversar em inglês presencial</td>
+    <td class="tg-0pky">●Frustração: <br>&emsp;●Dificuldade de administrar o grupo de línguas. <br>&emsp;●Não conseguir ampliar os grupos no qual participa
+  </tr>
+</tbody>
+</table>
