@@ -52,3 +52,25 @@ As personas levantadas durante o processo de entendimento do problema são apres
   </tr>
 </tbody>
 </table>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky" rowspan="2">
+      <img src="./Persona3_Renato_Bernardes.jpg" width="272" height="275">
+    </th>
+    <th class="tg-pie6" colspan="2"><span style="font-weight:bold">Renato Bernardes</span></th>
+  </tr>
+  <tr>
+    <th class="tg-0pky">●Idade: 45 anos<br><br> ●Ocupação: Empresário, dono de um café, com uma proposta cultural, recém aberto em Brasília.</th>
+    <th class="tg-0pky">●Após uma viagem para a Holanda começou a se interessar por diversas culturas.</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">●Motivação: Criar um ambiente descolado e mais atrativo
+    <td class="tg-0pky">●Objetivo: Atrair mais clientes para seu estabelecimento.</td>
+    <td class="tg-0pky">●Frustração: <br>&emsp;●O espaço é grande, mas o movimento ainda é menor que o esperado pela falta de atratividade; <br>&emsp;●As pessoas conhecem pouco esse tipo de proposta de cafeteria cultural
+  </tr>
+</tbody>
+</table>
