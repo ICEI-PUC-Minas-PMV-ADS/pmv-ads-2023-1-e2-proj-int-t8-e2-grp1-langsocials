@@ -75,6 +75,69 @@ As personas levantadas durante o processo de entendimento do problema são apres
 </tbody>
 </table>
 
+## Histórias de usuários
+
+<table style="undefined;table-layout: fixed; width: 1041px">
+<colgroup>
+<col style="width: 124.2px">
+<col style="width: 442.2px">
+<col style="width: 474.2px">
+</colgroup>
+<thead>
+  <tr>
+    <th>Eu como ...<br>[PERSONA]</th>
+    <th>...quero/desejo ...<br>[O QUE]</th>
+    <th>...para ...<br>[POR QUE]</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Juca Tavares</td>
+    <td>   <br>poder procurar por eventos de poliglotas por data, localização<br>e idioma    </td>
+    <td>&nbsp;&nbsp;&nbsp;<br>se programar para comparecer aos eventos&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Juca Tavares</td>
+    <td>   <br>salvar meus dados e preferências    </td>
+    <td>&nbsp;&nbsp;&nbsp;<br>não precisar digitá-los sempre que fizer uma busca&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Juca Tavares</td>
+    <td>   <br>poder alterar meus dados e preferências   </td>
+    <td>   <br>fazer buscas com critérios diferentes quando necessário   </td>
+  </tr>
+  <tr>
+    <td>Cibele Monteiro</td>
+    <td>deixar disponível para consulta online os eventos de <br>práticas poliglotas organizados por mim    </td>
+    <td>   <br>pode indicar aos meus alunos e deixar acessível a outros interessados   </td>
+  </tr>
+  <tr>
+    <td>Cibele Monteiro</td>
+    <td>   <br>encontrar com facilidade locais para a realização do   encontro   </td>
+    <td>   <br>facilitar a organização   </td>
+  </tr>
+  <tr>
+    <td>Cibele Monteiro</td>
+    <td>   <br>um local onde os participantes possam consultar as<br>bandeiras que representam as línguas faldas no encontro por cada grupo.   </td>
+    <td>   <br>para que eles possam identificar com facilidade os grupos formados nos locais,<br>já que os identificamos colocando uma bandeira sobre a mesa.   </td>
+  </tr>
+  <tr>
+    <td>Renato Bernardes</td>
+    <td>   <br>oferecer meu espaço para os encontros de prática   </td>
+    <td>   <br>aumentar o movimento de meu estabelecimento   </td>
+  </tr>
+  <tr>
+    <td>Renato Bernardes</td>
+    <td>   <br>poder estabelecer regras e horários para a utilização do   espaço   </td>
+    <td>   <br>evitar a lotação em horários de movimento elevado.   </td>
+  </tr>
+  <tr>
+    <td>Renato Bernardes</td>
+    <td>   <br>divulgar o contato e redes sociais de meu   estabelecimento   </td>
+    <td>   <br>para facilitar o contato com os organizadores   </td>
+  </tr>
+</tbody>
+</table>
 
 ## Requisitos funcionais
 
