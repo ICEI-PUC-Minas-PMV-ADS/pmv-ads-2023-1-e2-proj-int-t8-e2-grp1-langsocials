@@ -74,3 +74,48 @@ As personas levantadas durante o processo de entendimento do problema são apres
   </tr>
 </tbody>
 </table>
+
+
+## Requisitos funcionais
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-99c3"><span style="font-weight:bold">ID</span></th>
+    <th class="tg-99c3"><span style="font-weight:bold">Descrição</span></th>
+    <th class="tg-99c3"><span style="font-weight:bold">Prioridade</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">RF-1</td>
+    <td class="tg-0lax">O site deverá permitir o cadastro de dois tipos de conta(estabelecimento/participante)</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RF-2</td>
+    <td class="tg-0lax">O site deverá permitir a criação de eventos</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RF-3</td>
+    <td class="tg-0lax">O site deverá permitir a busca filtrada por eventos</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RF-4</td>
+    <td class="tg-0lax">O site deverá permitir o login do usuário cadastrado</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RF-5</td>
+    <td class="tg-0lax">O site deverá permitir que o usuário logado edite as informações da conta</td>
+    <td class="tg-0lax">Média</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RF-6</td>
+    <td class="tg-0lax">O site deverá permitir que o usuário possa deletar a conta</td>
+    <td class="tg-0lax">Baixa</td>
+  </tr>
+</tbody>
+</table>
