@@ -163,3 +163,28 @@ As personas levantadas durante o processo de entendimento do problema são apres
   </tr>
 </tbody>
 </table>
+
+## Restrições
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-99c3"><span style="font-weight:bold">ID</span></th>
+    <th class="tg-99c3"><span style="font-weight:bold">Descrição</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">RE-1</td>
+    <td class="tg-0lax">O aplicativo necessecita de conexão com a internet</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RE-2</td>
+    <td class="tg-0lax">O site só pode ser acessado por pessoas com +16 anos</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RE-3</td>
+    <td class="tg-0lax">O aplicativo possuirá um melhor funcionamento em computadores(Laptops/Desktops)</td>
+  </tr>
+</tbody>
+</table>
