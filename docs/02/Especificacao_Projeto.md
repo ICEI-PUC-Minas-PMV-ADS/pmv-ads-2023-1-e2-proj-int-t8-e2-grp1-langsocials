@@ -138,8 +138,8 @@ As personas levantadas durante o processo de entendimento do problema são apres
   </tr>
   <tr>
     <td class="tg-0lax">RNF-2</td>
-    <td class="tg-0lax">O site deverá poder ser baixado pelo browser e usado como um (PWA)</td>
-    <td class="tg-0lax">Baixo</td>
+    <td class="tg-0lax">O site deverá ser compatível com os principais navegadores do mercado como: (Chrome,Firefox,Edge)</td>
+    <td class="tg-0lax">Alta</td>
   </tr>
   <tr>
     <td class="tg-0lax">RNF-3</td>
