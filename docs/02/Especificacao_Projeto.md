@@ -74,3 +74,117 @@ As personas levantadas durante o processo de entendimento do problema são apres
   </tr>
 </tbody>
 </table>
+
+
+## Requisitos funcionais
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-99c3"><span style="font-weight:bold">ID</span></th>
+    <th class="tg-99c3"><span style="font-weight:bold">Descrição</span></th>
+    <th class="tg-99c3"><span style="font-weight:bold">Prioridade</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">RF-1</td>
+    <td class="tg-0lax">O site deverá permitir o cadastro de dois tipos de conta(estabelecimento/participante)</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RF-2</td>
+    <td class="tg-0lax">O site deverá permitir a criação de eventos</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RF-3</td>
+    <td class="tg-0lax">O site deverá permitir a busca filtrada por eventos</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RF-4</td>
+    <td class="tg-0lax">O site deverá permitir o login do usuário cadastrado</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RF-5</td>
+    <td class="tg-0lax">O site deverá permitir que o usuário logado edite as informações da conta</td>
+    <td class="tg-0lax">Média</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RF-6</td>
+    <td class="tg-0lax">O site deverá permitir que o usuário possa deletar a conta</td>
+    <td class="tg-0lax">Baixa</td>
+  </tr>
+</tbody>
+</table>
+
+## Requisitos não funcionais
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-99c3"><span style="font-weight:bold">ID</span></th>
+    <th class="tg-99c3"><span style="font-weight:bold">Descrição</span></th>
+    <th class="tg-99c3"><span style="font-weight:bold">Prioridade</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">RNF-1</td>
+    <td class="tg-0lax">O site deverá fazer uso do JWToken para autenticação dos usuários</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RNF-2</td>
+    <td class="tg-0lax">O site deverá ser compatível com os principais navegadores do mercado como: (Chrome,Firefox,Edge)</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RNF-3</td>
+    <td class="tg-0lax">O site deverá ser de facil manutenção</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RNF-4</td>
+    <td class="tg-0lax">O site deverá ser facil de utilizar e entender</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RNF-5</td>
+    <td class="tg-0lax">O site deverá ser seguro e protegido contra acessos não autorizados</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RNF-6</td>
+    <td class="tg-0lax">O site deverá estar disponivél quando necessário</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+</tbody>
+</table>
+
+## Restrições
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-99c3"><span style="font-weight:bold">ID</span></th>
+    <th class="tg-99c3"><span style="font-weight:bold">Descrição</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">RE-1</td>
+    <td class="tg-0lax">O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 19/03/2023</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RE-2</td>
+    <td class="tg-0lax">O aplicativo deve se restringir às tecnologias básicas da Web no Frontend e Backend</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RE-3</td>
+    <td class="tg-0lax">A equipe não pode subcontratar o desenvolvimento do trabalho</td>
+  </tr>
+</tbody>
+</table>
