@@ -119,3 +119,47 @@ As personas levantadas durante o processo de entendimento do problema são apres
   </tr>
 </tbody>
 </table>
+
+## Requisitos não funcionais
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-99c3"><span style="font-weight:bold">ID</span></th>
+    <th class="tg-99c3"><span style="font-weight:bold">Descrição</span></th>
+    <th class="tg-99c3"><span style="font-weight:bold">Prioridade</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">RNF-1</td>
+    <td class="tg-0lax">O site deverá fazer uso do JWToken para autenticação dos usuários</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RNF-2</td>
+    <td class="tg-0lax">O site deverá poder ser baixado pelo browser e usado como um (PWA)</td>
+    <td class="tg-0lax">Baixo</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RNF-3</td>
+    <td class="tg-0lax">O site deverá ser de facil manutenção</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RNF-4</td>
+    <td class="tg-0lax">O site deverá ser facil de utilizar e entender</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RNF-5</td>
+    <td class="tg-0lax">O site deverá ser seguro e protegido contra acessos não autorizados</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RNF-6</td>
+    <td class="tg-0lax">O site deverá estar disponivél quando necessário</td>
+    <td class="tg-0lax">Alta</td>
+  </tr>
+</tbody>
+</table>
