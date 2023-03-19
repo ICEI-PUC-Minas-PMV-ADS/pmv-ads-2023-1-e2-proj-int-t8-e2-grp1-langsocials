@@ -10,7 +10,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 <thead>
   <tr>
     <th class="tg-0pky" rowspan="2">
-      <img src="./Persona1_Juca_Tavares.jpg" width="272" height="275">
+      <img src="./Personas_img/Persona1_Juca_Tavares.jpg" width="272" height="275">
     </th>
     <th class="tg-pie6" colspan="2"><span style="font-weight:bold">Juca Tavares</span></th>
   </tr>
@@ -34,7 +34,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 <thead>
   <tr>
     <th class="tg-0pky" rowspan="2">
-      <img src="./Persona2_Cibele_Monteiro.jpg" width="272" height="275">
+      <img src="./Personas_img/Persona2_Cibele_Monteiro.jpg" width="272" height="275">
     </th>
     <th class="tg-pie6" colspan="2"><span style="font-weight:bold">Cibele Monteiro</span></th>
   </tr>
@@ -57,7 +57,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 <thead>
   <tr>
     <th class="tg-0pky" rowspan="2">
-      <img src="./Persona3_Renato_Bernardes.jpg" width="272" height="275">
+      <img src="./Personas_img/Persona3_Renato_Bernardes.jpg" width="272" height="275">
     </th>
     <th class="tg-pie6" colspan="2"><span style="font-weight:bold">Renato Bernardes</span></th>
   </tr>
@@ -201,3 +201,6 @@ As personas levantadas durante o processo de entendimento do problema são apres
   </tr>
 </tbody>
 </table>
+
+## Diagrama de Casos de Uso
+![Diagrama_de_casos_de_uso](./Casos_De_Uso/Caso_de_uso.drawio.png)
