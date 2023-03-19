@@ -75,6 +75,19 @@ As personas levantadas durante o processo de entendimento do problema são apres
 </tbody>
 </table>
 
+## Histórias de usuários
+
+| Eu como ... [PERSONA] | ...quero/desejo ... [O QUE]                                                                                                | ...para ... [POR QUE]                                                                                                                       |
+|-----------------------|----------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| Juca Tavares          | poder procurar por eventos de poliglotas por data, localização e idioma                                                    | se programar para comparecer aos eventos                                                                                                    |
+| Juca Tavares          | salvar meus dados e preferências                                                                                           |     não precisar digitá-los sempre que fizer uma busca                                                                                      |
+| Juca Tavares          | poder alterar meus dados e preferências                                                                                    | fazer buscas com critérios diferentes quando necessário                                                                                     |
+| Cibele Monteiro       | deixar disponível para consulta online os eventos de práticas poliglotas organizados por mim                               | pode indicar aos meus alunos e deixar acessível a outros interessados                                                                       |
+| Cibele Monteiro       | encontrar com facilidade locais para a realização do encontro                                                              | facilitar a organização                                                                                                                     |
+| Cibele Monteiro       | um local onde os participantes possam consultar as bandeiras que representam as línguas faldas no encontro por cada grupo. | para que eles possam identificar com facilidade os grupos formados nos locais, já que os identificamos colocando uma bandeira sobre a mesa. |
+| Renato Bernardes      | oferecer meu espaço para os encontros de prática                                                                           | aumentar o movimento de meu estabelecimento                                                                                                 |
+| Renato Bernardes      | poder estabelecer regras e horários para a utilização do espaço                                                            | evitar a lotação em horários de movimento elevado.                                                                                          |
+| Renato Bernardes      | divulgar o contato e redes sociais de meu estabelecimento                                                                  | para facilitar o contato com os organizadores                                                                                               |
 
 ## Requisitos funcionais
 
