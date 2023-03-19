@@ -188,3 +188,6 @@ As personas levantadas durante o processo de entendimento do problema são apres
   </tr>
 </tbody>
 </table>
+
+## Diagrama de Casos de Uso
+![Diagrama_de_casos_de_uso](./Casos_De_Uso/Caso_de_uso.drawio.png)
