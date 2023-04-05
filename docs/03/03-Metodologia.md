@@ -9,7 +9,6 @@ foi utilizado para hospedagem do repositório.
 
 O projeto segue a seguinte convenção para o nome de branches:
 
-`x3
 - `main` : mais recente versão estável e testada do software.
 - `dev` : mais recente versão estável e com recursos completos mais recente.
 - `feat/(nome do issue)` : versão instável para trabalho numa feature, deve ser mergeada na dev após teste, via Pull Request.
