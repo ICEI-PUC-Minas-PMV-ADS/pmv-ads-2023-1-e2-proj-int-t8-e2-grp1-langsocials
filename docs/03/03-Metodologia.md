@@ -31,11 +31,11 @@ etiquetas:
  - Product Owner: Alessandra Thevenard Freire
  - Equipe de Desenvolvimento
     - Adeilton Rodrigues Farias Junior
+    - Alessandra Thevenard Freire
     - Carlos Alberto Mendonça Vasconcelos
     - Gustavo Henrique De Jesus Almeida
     - Luiz Eduardo de Jesus Santana 
     - Pedro Rafael da Cruz Almeida
-    - Alessandra Thevenard Freire
 
 ### Processo
 
