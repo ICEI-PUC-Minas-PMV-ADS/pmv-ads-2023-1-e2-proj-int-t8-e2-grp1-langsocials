@@ -10,10 +10,11 @@ Aplicação para conectar estabelecimentos interessados e praticantes de convers
 
 ## Integrantes
 
-* Luiz Eduardo de Jesus Santana
 * Adeilton Farias Rodrigues Junior
-* Gustavo Henrique de Jesus Almeida
+* Alessandra Thevenard Freire
 * Carlos Alberto Mendonça Vasconselos
+* Gustavo Henrique de Jesus Almeida
+* Luiz Eduardo de Jesus Santana
 * Pedro Rafael da Cruz Almeida
 
 ## Orientador
