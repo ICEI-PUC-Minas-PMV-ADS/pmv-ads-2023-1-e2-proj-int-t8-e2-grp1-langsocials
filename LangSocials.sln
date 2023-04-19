@@ -9,22 +9,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{41071413-BCA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1A5028E9-8964-4627-856A-A9A20EB6B14C}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{04A0F106-292E-4069-9AE7-895E3A96DC59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation.Server", "src\Presentation\Server\Presentation.Server.csproj", "{D459C41A-0229-4E78-BF6F-12884BAD1DD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presentation.Server", "src\Presentation\Server\Presentation.Server.csproj", "{D459C41A-0229-4E78-BF6F-12884BAD1DD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation.Client", "src\Presentation\Client\Presentation.Client.csproj", "{61C4F029-1F20-4284-A356-9EDD547D9E3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presentation.Client", "src\Presentation\Client\Presentation.Client.csproj", "{61C4F029-1F20-4284-A356-9EDD547D9E3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation.Shared", "src\Presentation\Shared\Presentation.Shared.csproj", "{6395A2EF-09A0-4B51-B4D4-79E47BE4A710}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presentation.Shared", "src\Presentation\Shared\Presentation.Shared.csproj", "{6395A2EF-09A0-4B51-B4D4-79E47BE4A710}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Application\Application.csproj", "{F059C197-0866-468E-B63A-A473AAE6F39F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\Application\Application.csproj", "{F059C197-0866-468E-B63A-A473AAE6F39F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraesctructure", "src\Infraesctructure\Infraesctructure.csproj", "{18DA37AA-DF84-4B19-88E8-B5E23BD68E54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraesctructure", "src\Infraesctructure\Infraesctructure.csproj", "{18DA37AA-DF84-4B19-88E8-B5E23BD68E54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain.csproj", "{A75CD2F2-14A6-4C7B-999A-C50D18C2A1A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "src\Domain\Domain.csproj", "{A75CD2F2-14A6-4C7B-999A-C50D18C2A1A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
