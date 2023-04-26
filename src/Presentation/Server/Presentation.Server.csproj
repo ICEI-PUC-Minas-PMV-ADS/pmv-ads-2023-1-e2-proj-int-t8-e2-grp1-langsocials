@@ -4,6 +4,8 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	  <AssemblyName>LangSocials.Presentation.Server</AssemblyName>
+	  <RootNamespace>LangSocials.Presentation.Server</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,6 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\..\Infraesctructure\Infraesctructure.csproj" />
     <ProjectReference Include="..\Client\Presentation.Client.csproj" />
     <ProjectReference Include="..\Shared\Presentation.Shared.csproj" />
   </ItemGroup>

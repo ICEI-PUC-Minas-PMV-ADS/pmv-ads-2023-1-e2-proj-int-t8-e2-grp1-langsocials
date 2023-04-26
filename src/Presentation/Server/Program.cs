@@ -1,13 +1,19 @@
-using Microsoft.AspNetCore.ResponseCompression;
+using LangSocials.Infraesctructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
+LangSocials.Presentation.Server.DependencyInjection.ConfigureServices(builder);
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
+
+var scope = app.Services.CreateScope();
+var context = scope.ServiceProvider.GetRequiredService<LangSocialsDbContext>();
+//await context.Database.EnsureDeletedAsync();
+await context.Database.EnsureCreatedAsync();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
