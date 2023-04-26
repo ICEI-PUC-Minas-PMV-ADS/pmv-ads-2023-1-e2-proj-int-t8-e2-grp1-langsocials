@@ -26,8 +26,8 @@ Aplicação para conectar estabelecimentos interessados e praticantes de convers
 <ol>
 <li><a href="docs/01/Documentacao_Contexto.md"> Documentação de Contexto</a></li>
 <li><a href="docs/02/Especificacao_Projeto.md"> Especificação do Projeto</a></li>
-<li><a href="docs/03-Metodologia.md"> Metodologia</a></li>
-<li><a href="docs/04-Projeto de Interface.md"> Projeto de Interface</a></li>
+<li><a href="docs/03/03-Metodologia"> Metodologia</a></li>
+<li><a href="docs/04/04-Projeto de Interface.md"> Projeto de Interface</a></li>
 <li><a href="docs/05/Arquitetura_Solucao.md"> Arquitetura da Solução</a></li>
 <li><a href="docs/06-Template Padrão da Aplicação.md"> Template Padrão da Aplicação</a></li>
 <li><a href="docs/07-Programação de Funcionalidades.md"> Programação de Funcionalidades</a></li>
