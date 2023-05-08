@@ -1,4 +1,4 @@
-using LangSocials.Infraesctructure;
+using LangSocials.Infraesctructure.LangSocialsDb;
 
 var builder = WebApplication.CreateBuilder(args);
 

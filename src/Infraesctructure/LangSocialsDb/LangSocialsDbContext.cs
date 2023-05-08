@@ -1,16 +1,21 @@
-﻿using LangSocials.Domain.Entities;
+﻿using Application.Common.LangSocialsDb;
+using LangSocials.Domain.Entities;
 using LangSocials.Infraesctructure.Mappings;
 using Microsoft.EntityFrameworkCore;
 
+namespace LangSocials.Infraesctructure.LangSocialsDb;
 
-namespace LangSocials.Infraesctructure;
-
-public class LangSocialsDbContext : DbContext
+public class LangSocialsDbContext : DbContext, IUnitOfWork
 {
     public LangSocialsDbContext(DbContextOptions<LangSocialsDbContext> options) : base(options) { }
     public DbSet<User> Users { get; set; }
     public DbSet<Location> Locations { get; set; }
     public DbSet<SocialEvent> SocialEvents { get; set; }
+
+    public async Task SaveChagnes(CancellationToken cancellationToken = default)
+    {
+        await SaveChangesAsync(cancellationToken);
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

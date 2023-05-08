@@ -1,5 +1,7 @@
+using Application.UseCases.LocationCases.GetLocationByName;
 using LangSocials.Domain.Entities;
-using LangSocials.Infraesctructure;
+using LangSocials.Infraesctructure.LangSocialsDb;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Presentation.Shared;
 
@@ -14,12 +16,14 @@ namespace Presentation.Server.Controllers
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
         private readonly LangSocialsDbContext context;
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<WeatherForecastController> logger;
+        private readonly ISender sender;
 
-        public WeatherForecastController(LangSocialsDbContext context, ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(LangSocialsDbContext context, ILogger<WeatherForecastController> logger, ISender sender)
         {
             this.context = context;
-            _logger = logger;
+            this.logger = logger;
+            this.sender = sender;
         }
 
         [HttpGet]
@@ -41,8 +45,7 @@ namespace Presentation.Server.Controllers
 
             var location = new Location
             {
-                Longitude = -10.9369302m,
-                Latitude = -37.0558675m,
+                PlaceId = "ChIJo4B945KzGgcRRZsrhf97Xhc",
                 Name = "Escariz Jorge amado",
                 SocialEvents = new List<SocialEvent> { }
             };
@@ -64,6 +67,8 @@ namespace Presentation.Server.Controllers
             await context.AddAsync(socialEvent, cancellationToken);
 
             await context.SaveChangesAsync(cancellationToken);
+
+            var response = await sender.Send(new SearchLocationRequest("Shopping Parque"), cancellationToken);
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
