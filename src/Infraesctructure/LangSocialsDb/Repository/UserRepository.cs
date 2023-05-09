@@ -21,4 +21,7 @@ public class UserRepository : IUserRepository
        => await context.Users.AnyAsync(a => a.Email == email, cancellationToken);
     public void Update(User user)
        => context.Update(user);
+    public async Task<User?> Find(string email, CancellationToken cancellationToken)
+       => await context.Users.FirstOrDefaultAsync(a => a.Email == email, cancellationToken);
+
 }
