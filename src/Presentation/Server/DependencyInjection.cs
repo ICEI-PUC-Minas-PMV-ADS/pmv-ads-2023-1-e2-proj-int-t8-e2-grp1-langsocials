@@ -1,4 +1,7 @@
-﻿namespace LangSocials.Presentation.Server;
+﻿using Application.Common.Services;
+using LangSocials.Presentation.Server.Services;
+
+namespace LangSocials.Presentation.Server;
 
 public static class DependencyInjection
 {
@@ -9,5 +12,6 @@ public static class DependencyInjection
         );
         Infraesctructure.DependencyInjection.AddInfraesctructure(builder.Services);
         Application.DependencyInjection.AddApplication(builder.Services);
+        builder.Services.AddScoped<IUserInfo, UserId>();
     }
 }

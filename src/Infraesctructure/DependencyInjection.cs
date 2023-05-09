@@ -1,5 +1,6 @@
 ﻿using Application.Common.LangSocialsDb;
 using LangSocials.Infraesctructure.LangSocialsDb;
+using LangSocials.Infraesctructure.LangSocialsDb.Repository;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,6 +22,8 @@ public static class DependencyInjection
             sqliteConnection.Open();
             cfg.UseSqlite(sqliteConnection);
         });
+
+        services.AddScoped<IUserRepository, UserRepository>();
 
         services.AddScoped(sp => sp.GetRequiredService<LangSocialsDbContext>() as IUnitOfWork);
 
