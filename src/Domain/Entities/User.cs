@@ -10,4 +10,5 @@ public class User : Entity
     public required string Description { get; set; }
     public required ICollection<SocialEvent> Organizing { get; set; }
     public required ICollection<SocialEvent> Participating { get; set; }
+    public required ICollection<LocationUser> LocationUsers { get; set; }
 }
