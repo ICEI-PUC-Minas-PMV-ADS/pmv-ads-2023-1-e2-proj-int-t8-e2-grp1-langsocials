@@ -32,9 +32,11 @@ namespace Presentation.Server.Controllers
             var user = new User
             {
                 Name = $"Nome {DateTime.Now}",
+                Email = "",
                 PasswordHash = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 },
                 PasswordSalt = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 },
                 ShowContactInfo = true,
+                Description = "",
                 Organizing = new List<SocialEvent>(),
                 Participating = new List<SocialEvent>()
             };
