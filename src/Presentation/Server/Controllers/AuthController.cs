@@ -3,7 +3,10 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LangSocials.Presentation.Server.Controllers;
-public class AuthController : Controller
+
+[Route("[controller]")]
+[ApiController]
+public class AuthController : ControllerBase
 {
     private readonly ISender sender;
 
@@ -11,6 +14,8 @@ public class AuthController : Controller
     {
         this.sender = sender;
     }
+
+    [HttpPost("login")]
     public async Task<IResult> Login(LoginRequest request, CancellationToken cancellationToken)
     {
         var result = await sender.Send(request, cancellationToken);
