@@ -11,6 +11,7 @@ public class LangSocialsDbContext : DbContext, IUnitOfWork
     public DbSet<User> Users { get; set; }
     public DbSet<Location> Locations { get; set; }
     public DbSet<SocialEvent> SocialEvents { get; set; }
+    public DbSet<LocationUser> LocationUsers { get; set; }
 
     public async Task SaveChagnes(CancellationToken cancellationToken = default)
     {
