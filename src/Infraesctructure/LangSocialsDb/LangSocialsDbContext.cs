@@ -1,5 +1,6 @@
 ﻿using Application.Common.LangSocialsDb;
 using LangSocials.Domain.Entities;
+using LangSocials.Infraesctructure.LangSocialsDb.Mappings;
 using LangSocials.Infraesctructure.Mappings;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,7 +12,7 @@ public class LangSocialsDbContext : DbContext, ILangSocialsDbUnitOfWork
     public DbSet<User> Users { get; set; }
     public DbSet<Location> Locations { get; set; }
     public DbSet<SocialEvent> SocialEvents { get; set; }
-    public DbSet<LocationUser> LocationUsers { get; set; }
+    public DbSet<LocationClaim> LocationClaims { get; set; }
 
     public async Task SaveChagnes(CancellationToken cancellationToken = default)
     {
@@ -23,6 +24,7 @@ public class LangSocialsDbContext : DbContext, ILangSocialsDbUnitOfWork
         modelBuilder.ApplyConfiguration(new SocialEventMapping());
         modelBuilder.ApplyConfiguration(new UserMapping());
         modelBuilder.ApplyConfiguration(new LocationMapping());
+        modelBuilder.ApplyConfiguration(new LocationClaimMapping());
         base.OnModelCreating(modelBuilder);
     }
 }

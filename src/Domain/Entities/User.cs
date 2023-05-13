@@ -10,5 +10,5 @@ public class User : Entity
     public string? Description { get; set; }
     public ICollection<SocialEvent> Organizing { get; set; } = new List<SocialEvent>();
     public ICollection<SocialEvent> Participating { get; set; } = new List<SocialEvent>();
-    public ICollection<LocationUser> LocationUsers { get; set; } = new List<LocationUser>();
+    public ICollection<LocationClaim> LocationClaims { get; set; } = new List<LocationClaim>();
 }

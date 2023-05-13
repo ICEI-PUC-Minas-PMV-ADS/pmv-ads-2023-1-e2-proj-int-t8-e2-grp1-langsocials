@@ -1,6 +1,6 @@
 ﻿namespace LangSocials.Domain.Entities;
 
-public class LocationUser : Entity
+public class LocationClaim : Entity
 {
     public int UserId { get; set; }
     public required User User { get; set; }
