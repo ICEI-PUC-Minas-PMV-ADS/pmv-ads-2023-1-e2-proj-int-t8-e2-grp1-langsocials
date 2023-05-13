@@ -3,11 +3,11 @@ using System.Security.Claims;
 
 namespace LangSocials.Presentation.Server.Services;
 
-public class UserId : IUserInfo
+public class HttpContextUserInfo : IUserInfo
 {
     private readonly IHttpContextAccessor httpContextAccessor;
 
-    public UserId(IHttpContextAccessor httpContextAccessor)
+    public HttpContextUserInfo(IHttpContextAccessor httpContextAccessor)
     {
         this.httpContextAccessor = httpContextAccessor;
     }

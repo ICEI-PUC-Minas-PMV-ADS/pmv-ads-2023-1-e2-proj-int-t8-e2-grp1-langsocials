@@ -10,5 +10,6 @@ public class LocationMapping : IEntityTypeConfiguration<Location>
     {
         builder.HasKey(x => x.Id);
         builder.Property(l => l.Name);
+        builder.Property(l => l.PlaceId);
     }
 }

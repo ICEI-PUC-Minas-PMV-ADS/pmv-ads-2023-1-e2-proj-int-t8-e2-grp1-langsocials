@@ -1,5 +1,5 @@
 ﻿using Application.UseCases.AccountCases.EditAccount;
-using FluentResults;
+using LangSocials.Presentation.Server.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,11 +17,11 @@ namespace LangSocials.Presentation.Server.Controllers
         }
 
         [HttpPut]
-        public async Task<IResult> EditAccount(EditAccountRequest request, CancellationToken cancellationToken)
+        public async Task<IResult> EditAccount(UpdateAccountInfoRequest request, CancellationToken cancellationToken)
         {
             var result = await sender.Send(request, cancellationToken);
 
-            return Results.Ok(result);
+            return result.Serialize();
         }
     }
 }

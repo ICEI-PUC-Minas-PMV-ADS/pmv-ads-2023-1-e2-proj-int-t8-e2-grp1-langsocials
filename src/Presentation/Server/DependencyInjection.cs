@@ -1,7 +1,6 @@
 ﻿using Application.Common.Token;
 using LangSocials.Presentation.Server.Services.Token;
 using System.Text;
-
 using Application.Common.Services;
 using LangSocials.Presentation.Server.Services;
 
@@ -12,7 +11,7 @@ public static class DependencyInjection
     public static void ConfigureServices(WebApplicationBuilder builder)
     {
         Infraesctructure.LocationSearch.DependencyInjection.AddGooglePlacesAPILocationSearchRepository(builder.Services,
-            builder => builder.Configure(opt => { opt.BaseAddress = "https://maps.googleapis.com/maps/api/"; opt.ApiKey = "🐀SEM CHAVE DE API ATÉ PRA PRODUCAO🐀"; })
+            builder => builder.Configure(opt => { opt.BaseAddress = "https://maps.googleapis.com/maps/api/"; opt.ApiKey = "AIzaSyBxia_64eeH1QMLXy8bSP8TxfHR_Dk928Y"; })
         );
         Infraesctructure.DependencyInjection.AddInfraesctructure(builder.Services);
         Application.DependencyInjection.AddApplication(builder.Services);
@@ -20,6 +19,6 @@ public static class DependencyInjection
         builder.Services.Configure<TokenServiceOption>(opt => opt.TokenKey = Encoding.UTF8.GetBytes(builder.Configuration.GetValue<string>("LANGSOCIALS__TOKEN_KEY") ?? throw new ArgumentNullException("LANGSOCIALS__TOKEN_KEY")));
 
         builder.Services.AddScoped<ITokenService, TokenService>();
-        builder.Services.AddScoped<IUserInfo, UserId>();
+        builder.Services.AddScoped<IUserInfo, HttpContextUserInfo>();
     }
 }

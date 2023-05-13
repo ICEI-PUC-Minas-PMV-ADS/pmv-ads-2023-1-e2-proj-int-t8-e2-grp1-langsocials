@@ -7,8 +7,8 @@ public class User : Entity
     public required byte[] PasswordHash { get; set; }
     public required byte[] PasswordSalt { get; set; }
     public bool ShowContactInfo { get; set; }
-    public required string Description { get; set; }
-    public required ICollection<SocialEvent> Organizing { get; set; }
-    public required ICollection<SocialEvent> Participating { get; set; }
-    public required ICollection<LocationUser> LocationUsers { get; set; }
+    public string? Description { get; set; }
+    public ICollection<SocialEvent> Organizing { get; set; } = new List<SocialEvent>();
+    public ICollection<SocialEvent> Participating { get; set; } = new List<SocialEvent>();
+    public ICollection<LocationUser> LocationUsers { get; set; } = new List<LocationUser>();
 }

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LangSocials.Infraesctructure.LangSocialsDb;
 
-public class LangSocialsDbContext : DbContext, IUnitOfWork
+public class LangSocialsDbContext : DbContext, ILangSocialsDbUnitOfWork
 {
     public LangSocialsDbContext(DbContextOptions<LangSocialsDbContext> options) : base(options) { }
     public DbSet<User> Users { get; set; }
