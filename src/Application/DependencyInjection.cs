@@ -10,7 +10,7 @@ public static class DependencyInjection
     {
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<UnhandledError>());
 
-        services.AddScoped<ICryptographyService, cryptographServiceFake>();
+        services.AddScoped<ICryptographyService, CryptographyService>();
 
         return services;
     }

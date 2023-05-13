@@ -13,15 +13,23 @@ public class UserRepository : IUserRepository
         this.context = context;
     }
 
-    public async Task<User?> Find(int id, CancellationToken cancellationToken)
-       => await context.Users.FirstOrDefaultAsync(a => a.Id == id, cancellationToken);
-    public async Task<bool> IsUniqueName(string name, CancellationToken cancellationToken)
-       => await context.Users.AnyAsync(a => a.Name == name, cancellationToken);
-    public async Task<bool> IsUniqueEmail(string email, CancellationToken cancellationToken)
-       => await context.Users.AnyAsync(a => a.Email == email, cancellationToken);
-    public void Update(User user)
-       => context.Update(user);
-    public async Task<User?> Find(string email, CancellationToken cancellationToken)
-       => await context.Users.FirstOrDefaultAsync(a => a.Email == email, cancellationToken);
+    public Task<User?> Find(int id, CancellationToken cancellationToken)
+    {
+        return context.Users.FirstOrDefaultAsync(a => a.Id == id, cancellationToken);
+    }
 
+    public Task<User?> Find(string email, CancellationToken cancellationToken)
+    {
+        return context.Users.FirstOrDefaultAsync(a => a.Email == email, cancellationToken);
+    }
+
+    public void Update(User user)
+    {
+        context.Update(user);
+    }
+
+    public async Task Add(User user, CancellationToken cancellationToken = default)
+    {
+        await context.Users.AddAsync(user, cancellationToken);
+    }
 }

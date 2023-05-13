@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Application.Common.Cryptography;
+﻿namespace Application.Common.Cryptography;
 public interface ICryptographyService
 {
     bool Compare(string rawText, byte[] cypherText, byte[] salt);
+    (byte[] Hash, byte[] Salt) GenerateHash(string rawText);
 }

@@ -1,6 +1,6 @@
 ﻿namespace Application.Common.LangSocialsDb;
 
-public interface IUnitOfWork
+public interface ILangSocialsDbUnitOfWork
 {
     Task SaveChagnes(CancellationToken cancellationToken = default);
 }
