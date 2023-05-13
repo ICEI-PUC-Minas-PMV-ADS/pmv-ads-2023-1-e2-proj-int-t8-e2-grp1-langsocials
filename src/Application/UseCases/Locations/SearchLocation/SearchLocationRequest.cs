@@ -17,10 +17,13 @@ public class SearchLocationRequestHandler : IResultRequestHandler<SearchLocation
 
     public async Task<Result<SearchLocationResponse>> Handle(SearchLocationRequest request, CancellationToken cancellationToken)
     {
-        var placeId = await locationSearchRepository.ClosestPlaceId(request.Name, cancellationToken);
+        var closestPlace = await locationSearchRepository.ClosestPlace(request.Name, cancellationToken);
 
-        return new SearchLocationResponse(placeId).ToResult();
+        if (closestPlace is null)
+            return Result.Ok<SearchLocationResponse>(default!);
+
+        return new SearchLocationResponse(closestPlace.Value.PlaceId, closestPlace.Value.Latitude, closestPlace.Value.Longitude).ToResult();
     }
 }
 
-public record SearchLocationResponse(string? PlaceId);
+public record SearchLocationResponse(string PlaceId, double Latitude, double Longitude);

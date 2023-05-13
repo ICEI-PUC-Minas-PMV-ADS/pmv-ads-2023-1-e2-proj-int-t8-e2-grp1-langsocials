@@ -2,5 +2,5 @@
 
 public interface ILocationSearchRepository
 {
-    Task<string?> ClosestPlaceId(string query, CancellationToken cancellationToken = default);
+    Task<(string PlaceId, double Latitude, double Longitude)?> ClosestPlace(string query, CancellationToken cancellationToken = default);
 }

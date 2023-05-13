@@ -5,7 +5,7 @@ using LangSocials.Domain.Entities;
 
 namespace Application.UseCases.Locations.SaveLocation;
 
-public record SaveLocationRequest(string Name, string PlaceId) : IResultRequest;
+public record SaveLocationRequest(string Name, string PlaceId, double Latitude, double Longitude) : IResultRequest;
 
 public class SaveLocationRequestHandler : IResultRequestHandler<SaveLocationRequest>
 {
