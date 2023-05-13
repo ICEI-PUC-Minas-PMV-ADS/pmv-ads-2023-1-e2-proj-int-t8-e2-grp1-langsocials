@@ -3,7 +3,7 @@ using Application.Common.MediatrExtensions;
 using FluentResults;
 using LangSocials.Domain.Entities;
 
-namespace Application.UseCases.LocationCases.SaveLocation;
+namespace Application.UseCases.Locations.SaveLocation;
 
 public record SaveLocationRequest(string Name, string PlaceId) : IResultRequest;
 
