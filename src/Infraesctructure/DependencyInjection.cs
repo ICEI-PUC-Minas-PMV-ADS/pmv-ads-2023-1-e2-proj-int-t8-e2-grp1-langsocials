@@ -25,6 +25,7 @@ public static class DependencyInjection
 
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<ILocationRepository, LocationRepository>();
+        services.AddScoped<IRatingRopository, RatingRepository>();
 
         services.AddScoped(sp => sp.GetRequiredService<LangSocialsDbContext>() as ILangSocialsDbUnitOfWork);
 
