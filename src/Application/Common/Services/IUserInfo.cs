@@ -5,6 +5,6 @@ namespace Application.Common.Services;
 public interface IUserInfo
 {
     int Id { get; }
-
-    Location? SearchLocation { get; }
+    string City { get; set; }
+    string State { get; set; }
 }

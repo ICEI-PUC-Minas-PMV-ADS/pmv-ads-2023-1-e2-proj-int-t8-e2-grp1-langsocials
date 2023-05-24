@@ -1,29 +1,58 @@
-﻿using Application.Common.MediatrExtensions;
-using Application.Common.Repository.LocationSearch;
+﻿using Application.Common.LangSocialsDb;
+using Application.Common.MediatrExtensions;
+using Application.Common.Services;
 using FluentResults;
+using LangSocials.Domain.Entities;
 
 namespace Application.UseCases.Locations.GetLocationByName;
 
-public record SearchLocationRequest(string Name) : IResultRequest<SearchLocationResponse>;
+public record SearchLocationRequest(string Name) : IResultRequest<IEnumerable<SearchLocationResponse>>;
 
-public class SearchLocationRequestHandler : IResultRequestHandler<SearchLocationRequest, SearchLocationResponse>
+public class SearchLocationRequestHandler : IResultRequestHandler<SearchLocationRequest, IEnumerable<SearchLocationResponse>>
 {
-    private readonly ILocationSearchRepository locationSearchRepository;
+    private readonly ILocationRepository locationRepository;
+    private readonly IUserInfo userInfo;
 
-    public SearchLocationRequestHandler(ILocationSearchRepository locationSearchRepository)
+    public SearchLocationRequestHandler(ILocationRepository locationRepository, IUserInfo userInfo)
     {
-        this.locationSearchRepository = locationSearchRepository;
+        this.locationRepository = locationRepository;
+        this.userInfo = userInfo;
     }
 
-    public async Task<Result<SearchLocationResponse>> Handle(SearchLocationRequest request, CancellationToken cancellationToken)
+    public async Task<Result<IEnumerable<SearchLocationResponse>>> Handle(SearchLocationRequest request, CancellationToken cancellationToken)
     {
-        var closestPlace = await locationSearchRepository.ClosestPlace(request.Name, cancellationToken);
+        var allLocations = await locationRepository.Search(request.Name, userInfo.City, userInfo.State, cancellationToken);
 
-        if (closestPlace is null)
-            return Result.Ok<SearchLocationResponse>(default!);
+        var responses = allLocations.Select(l => new SearchLocationResponse(l));
 
-        return new SearchLocationResponse(closestPlace.Value.PlaceId, closestPlace.Value.Latitude, closestPlace.Value.Longitude).ToResult();
+        return responses.ToResult();
     }
 }
 
-public record SearchLocationResponse(string PlaceId, double Latitude, double Longitude);
+
+// TODO: Create map from Location to LocationResponse
+public record SearchLocationResponse(
+    int LocationId,
+    string Name,
+    string Street,
+    string PostalCode,
+    string Neighborhood,
+    string City,
+    string State,
+    string Number,
+    string Complement
+)
+{
+    public SearchLocationResponse(Location location) : this(
+        location.Id,
+        location.Name,
+        location.Street,
+        location.PostalCode,
+        location.Neighborhood,
+        location.City,
+        location.State,
+        location.Number,
+        location.Complement
+    )
+    { }
+};

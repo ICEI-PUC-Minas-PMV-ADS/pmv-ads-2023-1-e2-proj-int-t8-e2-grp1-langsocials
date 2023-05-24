@@ -32,7 +32,7 @@ public class LoginRequestHandler : IResultRequestHandler<LoginRequest, LoginResp
 
         var token = tokenService.GetToken(user);
 
-        var ownerLocations = user.LocationClaims.Select(ol => (ol.Location.Name, ol.Location.PlaceId));
+        var ownerLocations = user.LocationClaims.Select(ol => (ol.Location.Address, ol.Location.PlaceId));
 
         return new LoginResponse(token, user.Name, user.Email, ownerLocations).ToResult();
     }
