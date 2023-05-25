@@ -21,7 +21,7 @@ public class SearchLocationRequestHandler : IResultRequestHandler<SearchLocation
 
     public async Task<Result<IEnumerable<SearchLocationResponse>>> Handle(SearchLocationRequest request, CancellationToken cancellationToken)
     {
-        var allLocations = await locationRepository.Search(request.Name, userInfo.City, userInfo.State, cancellationToken);
+        var allLocations = locationRepository.Search(request.Name, userInfo.City, userInfo.State);
 
         var responses = allLocations.Select(l => new SearchLocationResponse(l));
 
