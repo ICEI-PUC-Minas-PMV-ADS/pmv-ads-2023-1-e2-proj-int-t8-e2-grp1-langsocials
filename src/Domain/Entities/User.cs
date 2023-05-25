@@ -4,6 +4,7 @@ public class User : Entity
 {
     public required string Name { get; set; }
     public required string Email { get; set; }
+    public string ImageURI { get; set; } = string.Empty;
     public required byte[] PasswordHash { get; set; }
     public required byte[] PasswordSalt { get; set; }
     public bool ShowContactInfo { get; set; }
