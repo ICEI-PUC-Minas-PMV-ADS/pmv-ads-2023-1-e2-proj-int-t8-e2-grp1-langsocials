@@ -2,9 +2,6 @@
 using Application.Common.MediatrExtensions;
 using FluentResults;
 using LangSocials.Domain.Entities;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.IO;
-using System.Xml.Linq;
 
 namespace Application.UseCases.Locations.SaveLocation;
 

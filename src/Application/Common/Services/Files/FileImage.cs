@@ -1,3 +1,3 @@
-﻿namespace Application.Common.LangSocialsDb.Extension;
+﻿namespace Application.Common.Services.Files;
 
 public record FileImage(string Extention, string ImageName, byte[] Image);
