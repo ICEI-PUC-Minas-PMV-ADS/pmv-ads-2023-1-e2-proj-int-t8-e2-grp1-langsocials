@@ -4,7 +4,7 @@ using Application.Common.Services;
 using FluentResults;
 using LangSocials.Domain.Entities;
 
-namespace Application.UseCases.Locations.GetLocationByName;
+namespace Application.UseCases.Locations.SearchLocation;
 
 public record SearchLocationRequest(string Name) : IResultRequest<IEnumerable<SearchLocationResponse>>;
 

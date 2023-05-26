@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace LangSocials.Infraesctructure.Mappings;
+namespace LangSocials.Infraesctructure.LangSocialsDb.Mappings;
 
 public class LocationMapping : IEntityTypeConfiguration<Location>
 {

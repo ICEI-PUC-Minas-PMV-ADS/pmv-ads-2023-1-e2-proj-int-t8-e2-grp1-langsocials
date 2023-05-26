@@ -13,4 +13,5 @@ public class Location : Entity
 
     public ICollection<SocialEvent> SocialEvents { get; set; } = new List<SocialEvent>();
     public LocationClaim? Claim { get; set; }
+
 }

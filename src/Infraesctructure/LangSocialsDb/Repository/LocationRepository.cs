@@ -17,6 +17,11 @@ public class LocationRepository : ILocationRepository
         await langSocialsDbContext.AddAsync(location, cancellationToken);
     }
 
+    public async Task<Location?> Find(int id, CancellationToken cancellationToken)
+    {
+        return await langSocialsDbContext.Locations.FirstOrDefaultAsync(lc => lc.Id == id, cancellationToken);
+    }
+
     public Task<bool> AlreadyExists(string nameFilter, string streetFilter, string numberFilter, string postalCodeFilter, CancellationToken cancellationToken = default)
     {
         return langSocialsDbContext.Locations.AnyAsync(l =>

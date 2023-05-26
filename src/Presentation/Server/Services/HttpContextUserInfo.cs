@@ -1,5 +1,4 @@
 ﻿using Application.Common.Services;
-using LangSocials.Domain.Entities;
 using System.Security.Claims;
 
 namespace LangSocials.Presentation.Server.Services;

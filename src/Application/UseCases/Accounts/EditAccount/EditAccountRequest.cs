@@ -3,7 +3,7 @@ using Application.Common.MediatrExtensions;
 using Application.Common.Services;
 using FluentResults;
 
-namespace Application.UseCases.AccountCases.EditAccount;
+namespace Application.UseCases.Accounts.EditAccount;
 
 public record UpdateAccountInfoRequest(string? Name, string? Description) : IResultRequest;
 
