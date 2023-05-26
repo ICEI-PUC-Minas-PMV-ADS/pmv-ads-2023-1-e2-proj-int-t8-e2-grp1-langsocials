@@ -8,8 +8,8 @@ public class Location : Entity
     public int Voters { get; set; }
     public double Latitude { get; set; }
     public double Longitude { get; set; }
-    public required ICollection<SocialEvent> SocialEvents { get; set; }
-    public ICollection<Rating> Ratings { get; set; } = new List<Rating>();
+    public ICollection<SocialEvent> SocialEvents { get; set; } = default!;
+    public ICollection<Rating> Ratings { get; set; } = default!;
     public LocationClaim? Claim { get; set; }
 
 }
