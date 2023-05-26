@@ -29,10 +29,10 @@ public class UpdateImageRequestHandler : IRequestHandler<UpdateImageRequest, Res
         if (user is null)
             return Result.Fail(new UnhandledError());
 
-        byte[] byt = new byte[request.ImageStream.Length];
+        var byt = new byte[request.ImageStream.Length];
         request.ImageStream.Read(byt, 0, byt.Length);
 
-        if (request is null)
+        if (request.ImageStream is null)
         {
             fileRepository.DeleteImage(user.ImageURI);
             user.ImageURI = fileRepository.DefaultUserImagePath;

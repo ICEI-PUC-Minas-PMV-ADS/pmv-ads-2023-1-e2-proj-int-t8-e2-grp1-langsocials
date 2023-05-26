@@ -25,7 +25,7 @@ namespace LangSocials.Presentation.Server.Controllers
             return result.Serialize();
         }
 
-        [HttpPut()]
+        [HttpPut("image")]
         public async Task<IResult> UpdateImageAccount(IFormFile request, CancellationToken cancellationToken)
         {
             var streamImage = new MemoryStream();
