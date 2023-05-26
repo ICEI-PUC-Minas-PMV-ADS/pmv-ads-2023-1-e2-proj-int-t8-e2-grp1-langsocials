@@ -1,4 +1,4 @@
-﻿using Application.UseCases.Evaluation;
+﻿using Application.UseCases.Evaluation.Ratings;
 using LangSocials.Presentation.Server.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

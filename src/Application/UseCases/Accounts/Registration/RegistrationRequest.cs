@@ -4,7 +4,7 @@ using Application.Common.MediatrExtensions;
 using FluentResults;
 using LangSocials.Domain.Entities;
 
-namespace Application.UseCases.AccountCases.Registration;
+namespace Application.UseCases.Accounts.Registration;
 
 public record RegistrationRequest(string Name, string Email, string Password, string? Description) : IResultRequest;
 

@@ -5,7 +5,7 @@ using FluentValidation;
 using LangSocials.Domain.Entities;
 using MediatR;
 
-namespace Application.UseCases.Evaluation;
+namespace Application.UseCases.Evaluation.Ratings;
 
 public record RatingRequest(int RatingValue, string Comment, int LocationId, int UserId) : IRequest<Result>;
 

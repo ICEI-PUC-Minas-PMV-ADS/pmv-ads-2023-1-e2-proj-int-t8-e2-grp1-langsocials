@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Common.Repository.LocationSearch;
+namespace LangSocials.Infraesctructure.LocationSearch;
 
 public class Geometry
 {

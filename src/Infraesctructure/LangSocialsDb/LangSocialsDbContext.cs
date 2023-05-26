@@ -1,7 +1,6 @@
 ﻿using Application.Common.LangSocialsDb;
 using LangSocials.Domain.Entities;
 using LangSocials.Infraesctructure.LangSocialsDb.Mappings;
-using LangSocials.Infraesctructure.Mappings;
 using Microsoft.EntityFrameworkCore;
 
 namespace LangSocials.Infraesctructure.LangSocialsDb;

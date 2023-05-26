@@ -1,4 +1,4 @@
-﻿using Application.UseCases.AccountCases.EditAccount;
+﻿using Application.UseCases.Accounts.EditAccount;
 using LangSocials.Presentation.Server.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

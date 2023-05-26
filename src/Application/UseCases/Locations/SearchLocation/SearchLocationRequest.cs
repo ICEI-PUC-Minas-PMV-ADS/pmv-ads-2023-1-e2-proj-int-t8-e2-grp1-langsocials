@@ -2,7 +2,7 @@
 using Application.Common.Repository.LocationSearch;
 using FluentResults;
 
-namespace Application.UseCases.Locations.GetLocationByName;
+namespace Application.UseCases.Locations.SearchLocation;
 
 public record SearchLocationRequest(string Name) : IResultRequest<SearchLocationResponse>;
 
