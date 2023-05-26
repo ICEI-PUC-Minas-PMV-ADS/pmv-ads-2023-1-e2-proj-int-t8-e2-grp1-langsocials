@@ -10,9 +10,6 @@ public static class DependencyInjection
 {
     public static void ConfigureServices(WebApplicationBuilder builder)
     {
-        Infraesctructure.LocationSearch.DependencyInjection.AddGooglePlacesAPILocationSearchRepository(builder.Services,
-            builder => builder.Configure(opt => { opt.BaseAddress = "https://maps.googleapis.com/maps/api/"; opt.ApiKey = "🐀"; })
-        );
         Infraesctructure.DependencyInjection.AddInfraesctructure(builder.Services);
         Application.DependencyInjection.AddApplication(builder.Services);
         

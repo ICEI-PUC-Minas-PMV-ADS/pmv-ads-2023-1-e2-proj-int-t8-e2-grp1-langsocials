@@ -18,8 +18,8 @@ public class RatingRepository : IRatingRopository
         await context.AddAsync(rating, cancellation);
     }
 
-    public async Task<IEnumerable<Rating?>> Find(int id, CancellationToken cancellation)
+    public async Task<IEnumerable<Rating>> Find(int LocationId, CancellationToken cancellation)
     {
-        return (await context.Locations.Include(l => l.Ratings).FirstOrDefaultAsync(rt => rt.Id == id, cancellation))?.Ratings ?? Enumerable.Empty<Rating>();
+        return (await context.Locations.Include(l => l.Ratings).FirstOrDefaultAsync(rt => rt.Id == LocationId, cancellation))?.Ratings ?? Enumerable.Empty<Rating>();
     }
 }

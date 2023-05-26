@@ -21,4 +21,27 @@ public class LocationRepository : ILocationRepository
     {
         return await langSocialsDbContext.Locations.FirstOrDefaultAsync(lc => lc.Id == id, cancellationToken);
     }
+
+    public Task<bool> AlreadyExists(string nameFilter, string streetFilter, string numberFilter, string postalCodeFilter, CancellationToken cancellationToken = default)
+    {
+        return langSocialsDbContext.Locations.AnyAsync(l =>
+            l.Name == nameFilter &&
+            l.Street == streetFilter &&
+            l.Number == numberFilter &&
+            l.PostalCode == postalCodeFilter, cancellationToken);
+
+    }
+
+    public IEnumerable<Location> Search(string nameFilter, string? cityFilter = null, string? stateFilter = null)
+    {
+        IQueryable<Location> baseFilter = langSocialsDbContext.Locations;
+
+        if(cityFilter is not null)
+            baseFilter = baseFilter.Where(l => l.City == cityFilter);
+
+        if (stateFilter is not null)
+            baseFilter = baseFilter.Where(l => l.State == stateFilter);
+
+        return baseFilter.Where(l => l.Name.Contains(nameFilter));
+    }
 }

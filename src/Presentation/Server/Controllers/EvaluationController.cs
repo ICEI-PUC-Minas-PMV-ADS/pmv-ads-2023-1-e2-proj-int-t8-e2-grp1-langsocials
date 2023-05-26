@@ -1,7 +1,9 @@
 ﻿using Application.UseCases.Evaluation.Ratings;
+using Application.UseCases.Evaluation.View;
 using LangSocials.Presentation.Server.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading;
 
 namespace LangSocials.Presentation.Server.Controllers;
 [Route("[Controller]")]
@@ -18,6 +20,14 @@ public class EvaluationController : Controller
     public async Task<IResult> Rating(RatingRequest request, CancellationToken cancellationToken)
     {
         var result = await sender.Send(request, cancellationToken);
+
+        return result.Serialize();
+    }
+
+    [HttpGet("{LocationId}")]
+    public async Task<IResult> ViewRating(int LocationId, CancellationToken cancellationToken)
+    {
+        var result = await sender.Send(new ViewRatingsRequest(LocationId), cancellationToken);
 
         return result.Serialize();
     }
