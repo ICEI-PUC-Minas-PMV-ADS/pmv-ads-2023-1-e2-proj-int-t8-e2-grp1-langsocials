@@ -1,6 +1,4 @@
-﻿using LangSocials.Domain.Entities;
-
-namespace Application.Common.Services;
+﻿namespace Application.Common.Services;
 
 public interface IUserInfo
 {
