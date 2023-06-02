@@ -1,4 +1,5 @@
-﻿using Application.UseCases.SocialEvents.GetSocialEventInformation;
+﻿using Application.UseCases.Locations.GetLocation;
+using Application.UseCases.SocialEvents.GetSocialEventInformation;
 using AutoMapper;
 using LangSocials.Domain.Entities;
 
@@ -9,5 +10,7 @@ public class ResponsesProfile : Profile
     {
         CreateMap<SocialEvent, GetSocialEventInformationResponse>()
             .ForCtorParam("Tags", cese => cese.MapFrom(se => se.Tags));
+        CreateMap<Location, GetLocationResponse>()
+            .ForCtorParam("Avarage", cel => cel.MapFrom(l => l.Ratings.Select(r => r.RatingValue).Average()));
     }
 }
