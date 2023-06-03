@@ -10,9 +10,11 @@ public record SaveLocationRequest(
     string Street,
     string PostalCode,
     string Neighborhood,
+    decimal ConsumptionValue,
     string City,
     string State,
     string Number,
+    string Description,
     string Complement = ""
 ) : IResultRequest;
 
@@ -28,7 +30,8 @@ public class SaveLocationRequestHandler : IResultRequestHandler<SaveLocationRequ
     }
     public async Task<Result> Handle(SaveLocationRequest request, CancellationToken cancellationToken)
     {
-        var doesLocationAlreadyExists = await locationRepository.AlreadyExists(request.Name, request.Street, request.Number, request.PostalCode, cancellationToken);
+        if (await locationRepository.AlreadyExists(request.Name, request.Street, request.Number, request.PostalCode, cancellationToken))
+            return Result.Fail(new UnhandledError());
 
         var location = new Location
         {
@@ -39,6 +42,8 @@ public class SaveLocationRequestHandler : IResultRequestHandler<SaveLocationRequ
             City = request.City,
             State = request.State,
             Number = request.Number,
+            Description = request.Description,
+            ConsumptionRequiredValue = request.ConsumptionValue,
             Complement = request.Complement
         };
 

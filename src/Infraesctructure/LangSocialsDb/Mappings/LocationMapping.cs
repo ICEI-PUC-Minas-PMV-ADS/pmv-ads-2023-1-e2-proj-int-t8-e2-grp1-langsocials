@@ -17,5 +17,6 @@ public class LocationMapping : IEntityTypeConfiguration<Location>
         builder.Property(l => l.Complement);
         builder.Property(l => l.Neighborhood);
         builder.Property(l => l.Name);
+        builder.HasOne(l => l.Owner).WithMany(u => u.Locations).HasForeignKey(l => l.OwnerId);
     }
 }

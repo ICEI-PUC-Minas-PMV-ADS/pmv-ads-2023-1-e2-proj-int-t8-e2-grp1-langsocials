@@ -36,12 +36,17 @@ public class LocationRepository : ILocationRepository
     {
         IQueryable<Location> baseFilter = langSocialsDbContext.Locations;
 
-        if(cityFilter is not null)
+        if (cityFilter is not null)
             baseFilter = baseFilter.Where(l => l.City == cityFilter);
 
         if (stateFilter is not null)
             baseFilter = baseFilter.Where(l => l.State == stateFilter);
 
         return baseFilter.Where(l => l.Name.Contains(nameFilter));
+    }
+
+    public void Update(Location location)
+    {
+        langSocialsDbContext.Update(location);
     }
 }
