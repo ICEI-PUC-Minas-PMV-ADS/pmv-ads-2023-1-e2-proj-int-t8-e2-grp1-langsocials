@@ -1,4 +1,5 @@
 ﻿using Application.UseCases.Auth.Login;
+using LangSocials.Presentation.Server.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,6 +21,6 @@ public class AuthController : ControllerBase
     {
         var result = await sender.Send(request, cancellationToken);
 
-        return Results.Ok(result.ValueOrDefault);
+        return result.Serialize();
     }
 }

@@ -12,5 +12,6 @@ public class UserMapping : IEntityTypeConfiguration<User>
         builder.Property(u => u.PasswordHash);
         builder.Property(u => u.PasswordSalt);
         builder.Property(u => u.ShowContactInfo);
+        builder.HasMany(u => u.Locations).WithOne(l => l.Owner).HasForeignKey(l => l.OwnerId);
     }
 }
