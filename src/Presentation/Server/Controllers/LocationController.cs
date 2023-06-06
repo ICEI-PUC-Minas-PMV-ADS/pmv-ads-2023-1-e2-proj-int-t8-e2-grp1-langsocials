@@ -1,4 +1,8 @@
-﻿using LangSocials.Presentation.Server.Extensions;
+﻿using Application.UseCases.Locations.ClaimLocation;
+using Application.UseCases.Locations.GetLocation;
+using Application.UseCases.Locations.SaveLocation;
+using Application.UseCases.Locations.SearchLocation;
+using LangSocials.Presentation.Server.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,10 +19,15 @@ public class LocationController : ControllerBase
         this.sender = sender;
     }
 
-    [HttpPost]
-    public async Task<IResult> SaveLocation(SaveLocationRequest request, CancellationToken cancellationToken)
     [HttpGet("{Id}")]
     public async Task<IResult> GetLocation(int Id, CancellationToken cancellationToken)
+    {
+        var result = await sender.Send(new GetLocationRequest(Id), cancellationToken);
+
+        return result.Serialize();
+    }
+    [HttpPost]
+    public async Task<IResult> SaveLocation(SaveLocationRequest request, CancellationToken cancellationToken)
     {
         var result = await sender.Send(request, cancellationToken);
 
@@ -37,7 +46,6 @@ public class LocationController : ControllerBase
     public async Task<IResult> ClaimLocation(ClaimLocationRequest request, CancellationToken cancellationToken)
     {
         var result = await sender.Send(request, cancellationToken);
-        var result = await sender.Send(new GetLocationRequest(Id), cancellationToken);
 
         return result.Serialize();
     }
