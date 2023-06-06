@@ -1,5 +1,5 @@
-﻿using Application.UseCases.Auth.Login;
-using Application.UseCases.Locations.ClaimLocation;
+﻿using Application.UseCases.Locations.ClaimLocation;
+using Application.UseCases.Locations.GetLocation;
 using Application.UseCases.Locations.SaveLocation;
 using Application.UseCases.Locations.SearchLocation;
 using LangSocials.Presentation.Server.Extensions;
@@ -19,6 +19,13 @@ public class LocationController : ControllerBase
         this.sender = sender;
     }
 
+    [HttpGet("{Id}")]
+    public async Task<IResult> GetLocation(int Id, CancellationToken cancellationToken)
+    {
+        var result = await sender.Send(new GetLocationRequest(Id), cancellationToken);
+
+        return result.Serialize();
+    }
     [HttpPost]
     public async Task<IResult> SaveLocation(SaveLocationRequest request, CancellationToken cancellationToken)
     {

@@ -12,4 +12,6 @@ public interface ISocialEventsRepository
         CancellationToken cancellationToken = default
     );
 
+    Task<SocialEvent?> QueryById(uint id, CancellationToken cancellationToken = default);
+
 }

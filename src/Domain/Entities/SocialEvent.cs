@@ -6,7 +6,9 @@ public class SocialEvent : Entity
     public required DateTime BeginsAt { get; set; }
     public required DateTime EndsAt { get; set; }
     public string? Description { get; set; }
+    public int LocationId { get; set; }
     public required Location Location { get; set; }
     public required User Organizer { get; set; }
     public required ICollection<User> Participants { get; set; }
+    public IEnumerable<Tag> Tags { get; set; } = Enumerable.Empty<Tag>();
 }

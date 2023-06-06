@@ -20,7 +20,7 @@ public class GetSocialEventsRequestHandler : IResultRequestHandler<GetSocialEven
 
     public async Task<Result<IEnumerable<GetSocialEventsResponse>>> Handle(GetSocialEventsRequest request, CancellationToken cancellationToken)
     {
-        var queriedEvents = socialEventsRepository.QuerySocialEvents(request.CityFilter, request.StateFilter, cancellationToken: cancellationToken);
+        var queriedEvents = await socialEventsRepository.QuerySocialEvents(request.CityFilter, request.StateFilter, cancellationToken: cancellationToken);
 
         var mappedEvents = mapper.Map<IEnumerable<GetSocialEventsResponse>>(queriedEvents); // TODO: Implementar mapa
 
