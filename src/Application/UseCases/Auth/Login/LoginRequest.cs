@@ -27,7 +27,7 @@ public class LoginRequestHandler : IResultRequestHandler<LoginRequest, LoginResp
         if (user is null)
             return Result.Fail(new UnhandledError());
 
-        if (!cryptographyService.Compare(request.Password, user.PasswordSalt, user.PasswordHash))
+        if (cryptographyService.Compare(request.Password, user.PasswordHash, user.PasswordSalt) is false)
             return Result.Fail(new UnhandledError());
 
         var token = tokenService.GetToken(user);
