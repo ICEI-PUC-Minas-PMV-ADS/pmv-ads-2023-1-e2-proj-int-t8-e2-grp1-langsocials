@@ -12,11 +12,13 @@ public class RegistrationRequestHandler : IResultRequestHandler<RegistrationRequ
 {
     private readonly ICryptographyService cryptographyService;
     private readonly IUserRepository userRepository;
+    private readonly ILangSocialsDbUnitOfWork langSocialsDbUnitOfWork;
 
-    public RegistrationRequestHandler(ICryptographyService cryptographyService, IUserRepository userRepository)
+    public RegistrationRequestHandler(ICryptographyService cryptographyService, IUserRepository userRepository, ILangSocialsDbUnitOfWork langSocialsDbUnitOfWork)
     {
         this.cryptographyService = cryptographyService;
         this.userRepository = userRepository;
+        this.langSocialsDbUnitOfWork = langSocialsDbUnitOfWork;
     }
 
     public async Task<Result> Handle(RegistrationRequest request, CancellationToken cancellationToken)
@@ -39,6 +41,8 @@ public class RegistrationRequestHandler : IResultRequestHandler<RegistrationRequ
         };
 
         await userRepository.Add(createdUser, cancellationToken);
+
+        await langSocialsDbUnitOfWork.SaveChagnes(cancellationToken);
 
         return Result.Ok();
     }
