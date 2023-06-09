@@ -1,24 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-	  <AssemblyName>LangSocials.Presentation.Server</AssemblyName>
-	  <RootNamespace>LangSocials.Presentation.Server</RootNamespace>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AssemblyName>LangSocials.Presentation.Server</AssemblyName>
+		<RootNamespace>LangSocials.Presentation.Server</RootNamespace>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="7.0.2" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.30.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="7.0.2" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.30.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Domain\Domain.csproj" />
-    <ProjectReference Include="..\..\Infraesctructure\Infraesctructure.csproj" />
-    <ProjectReference Include="..\Client\Presentation.Client.csproj" />
-    <ProjectReference Include="..\Shared\Presentation.Shared.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Domain\Domain.csproj" />
+		<ProjectReference Include="..\..\Infraesctructure\Infraesctructure.csproj" />
+		<ProjectReference Include="..\Client\Presentation.Client.csproj" />
+		<ProjectReference Include="..\Shared\Presentation.Shared.csproj" />
+	</ItemGroup>
 
 
 </Project>

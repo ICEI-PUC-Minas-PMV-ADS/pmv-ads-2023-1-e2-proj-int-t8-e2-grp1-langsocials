@@ -7,6 +7,8 @@ LangSocials.Presentation.Server.DependencyInjection.ConfigureServices(builder);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -18,6 +20,8 @@ await context.Database.EnsureCreatedAsync();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseSwagger();
+    app.UseSwaggerUI();
     app.UseWebAssemblyDebugging();
 }
 else
@@ -34,6 +38,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapRazorPages();
 app.MapControllers();

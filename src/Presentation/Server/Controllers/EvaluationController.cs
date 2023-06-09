@@ -2,6 +2,7 @@
 using Application.UseCases.Evaluation.View;
 using LangSocials.Presentation.Server.Extensions;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading;
 
@@ -17,6 +18,7 @@ public class EvaluationController : Controller
     }
 
     [HttpPost]
+    [Authorize]
     public async Task<IResult> Rating(RatingRequest request, CancellationToken cancellationToken)
     {
         var result = await sender.Send(request, cancellationToken);
@@ -25,6 +27,7 @@ public class EvaluationController : Controller
     }
 
     [HttpGet("{LocationId}")]
+    [Authorize]
     public async Task<IResult> ViewRating(int LocationId, CancellationToken cancellationToken)
     {
         var result = await sender.Send(new ViewRatingsRequest(LocationId), cancellationToken);
