@@ -1,11 +1,11 @@
-﻿using Application.Common.LangSocialsDb;
+﻿using AgileObjects.AgileMapper;
+using Application.Common.LangSocialsDb;
 using Application.Common.MediatrExtensions;
-using AutoMapper;
 using FluentResults;
 
 namespace Application.UseCases.SocialEvents.GetSocialEventInformation;
-public record GetSocialEventInformationRequest(uint Id) : IResultRequest<GetSocialEventInformationResponse>;
 
+public record GetSocialEventInformationRequest(uint Id) : IResultRequest<GetSocialEventInformationResponse>;
 
 public class GetSocialEventInformationRequestHandler : IResultRequestHandler<GetSocialEventInformationRequest, GetSocialEventInformationResponse>
 {
@@ -25,14 +25,19 @@ public class GetSocialEventInformationRequestHandler : IResultRequestHandler<Get
         if (socialEvent is null)
             return Result.Fail(new UnhandledError());
 
-        var response = mapper.Map<GetSocialEventInformationResponse>(socialEvent);
+        var response = mapper.Map(socialEvent).ToANew<GetSocialEventInformationResponse>();
 
         return response.ToResult();
     }
 }
 
-public record GetSocialEventInformationResponse(string Name, DateTime BeginsAt, DateTime EndsAt, string? Description, int LocationId, IEnumerable<GetSocialEventInformationTagResponse> Tags);
+public record GetSocialEventInformationResponse(
+    string Name, 
+    DateTime BeginsAt, 
+    DateTime EndsAt, 
+    string? Description, 
+    int LocationId, 
+    IEnumerable<GetSocialEventInformationTagResponse> Tags
+);
 
-
-
-public record GetSocialEventInformationTagResponse(string Name);
+public record GetSocialEventInformationTagResponse(int Id, string Name);

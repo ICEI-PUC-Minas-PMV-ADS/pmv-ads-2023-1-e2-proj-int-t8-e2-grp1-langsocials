@@ -4,7 +4,7 @@ namespace Application.Common.LangSocialsDb;
 
 public interface ISocialEventsRepository
 {
-    Task<IEnumerable<SocialEvent>> QuerySocialEvents(
+    Task<List<SocialEvent>> QuerySocialEvents(
         string? cityFilter = default,
         string? stateFilter = default,
         bool orderByPopularity = false,
@@ -13,5 +13,4 @@ public interface ISocialEventsRepository
     );
 
     Task<SocialEvent?> QueryById(uint id, CancellationToken cancellationToken = default);
-
 }

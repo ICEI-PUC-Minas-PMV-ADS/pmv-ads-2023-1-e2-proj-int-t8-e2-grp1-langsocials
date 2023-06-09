@@ -15,6 +15,7 @@ public static class DependencyInjection
         
         builder.Services.Configure<TokenServiceOption>(opt => opt.TokenKey = Encoding.UTF8.GetBytes(builder.Configuration.GetValue<string>("LANGSOCIALS__TOKEN_KEY") ?? throw new ArgumentNullException("LANGSOCIALS__TOKEN_KEY")));
 
+        builder.Services.AddHttpContextAccessor();
         builder.Services.AddScoped<ITokenService, TokenService>();
         builder.Services.AddScoped<IUserInfo, HttpContextUserInfo>();
     }

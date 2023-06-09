@@ -1,6 +1,6 @@
-﻿using Application.Common.LangSocialsDb;
+﻿using AgileObjects.AgileMapper;
+using Application.Common.LangSocialsDb;
 using Application.Common.MediatrExtensions;
-using AutoMapper;
 using FluentResults;
 
 namespace Application.UseCases.Locations.GetLocation;
@@ -23,7 +23,7 @@ public class GetLocationRequestHandler : IResultRequestHandler<GetLocationReques
         if (location is null)
             return Result.Fail(new UnhandledError());
 
-        var response = mapper.Map<GetLocationResponse>(location);
+        var response = mapper.Map(location).ToANew<GetLocationResponse>();
 
         return response.ToResult();
     }
@@ -41,4 +41,5 @@ public record GetLocationResponse(
     decimal ConsumptionRequiredValue, 
     int MaximumAmountPeople, 
     string Complement,
-    int Avarage);
+    int Avarage
+);

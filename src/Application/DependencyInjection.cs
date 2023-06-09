@@ -1,4 +1,5 @@
-﻿using Application.Common.Cryptography;
+﻿using AgileObjects.AgileMapper;
+using Application.Common.Cryptography;
 using Application.Common.MediatrExtensions;
 using Application.Common.Services.Files;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +12,7 @@ public static class DependencyInjection
     {
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<UnhandledError>());
 
+        services.AddSingleton(Mapper.CreateNew());
         services.AddScoped<ICryptographyService, CryptographyService>();
         services.AddScoped<IFileService, FileService>();
 

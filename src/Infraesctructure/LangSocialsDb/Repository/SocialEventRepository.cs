@@ -3,6 +3,7 @@ using LangSocials.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace LangSocials.Infraesctructure.LangSocialsDb.Repository;
+
 public class SocialEventRepository : ISocialEventsRepository
 {
     private readonly LangSocialsDbContext context;
@@ -11,13 +12,27 @@ public class SocialEventRepository : ISocialEventsRepository
     {
         this.context = context;
     }
+
     public Task<SocialEvent?> QueryById(uint id, CancellationToken cancellationToken = default)
     {
-        return context.SocialEvents.Include(se => se.Tags).SingleOrDefaultAsync(se => se.Id == id);
+        return context.SocialEvents.Include(se => se.Tags).FirstOrDefaultAsync(se => se.Id == id, cancellationToken);
     }
 
-    public Task<IEnumerable<SocialEvent>> QuerySocialEvents(string? cityFilter = null, string? stateFilter = null, bool orderByPopularity = false, int take = 20, CancellationToken cancellationToken = default)
+    public Task<List<SocialEvent>> QuerySocialEvents(string? cityFilter = null, string? stateFilter = null, bool orderByPopularity = false, int take = 20, CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        IQueryable<Location> locationQuery = context.Locations.Include(l => l.SocialEvents);
+
+        if (cityFilter != default)
+            locationQuery = locationQuery.Where(l => l.City == cityFilter);
+
+        if (stateFilter != default)
+            locationQuery = locationQuery.Where(l => l.State == stateFilter);
+
+        if (orderByPopularity)
+            locationQuery = locationQuery.OrderByDescending(l => l.RatingAvarage);
+
+        var socialEventsProjection = locationQuery.SelectMany(l => l.SocialEvents);
+
+        return socialEventsProjection.ToListAsync(cancellationToken);
     }
 }

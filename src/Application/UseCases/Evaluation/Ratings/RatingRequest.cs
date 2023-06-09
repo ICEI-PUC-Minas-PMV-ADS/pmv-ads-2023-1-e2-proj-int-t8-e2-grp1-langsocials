@@ -11,14 +11,12 @@ public record RatingRequest(int RatingValue, string Comment, int LocationId, int
 
 public class RatingRequestHandler : IRequestHandler<RatingRequest, Result>
 {
-    private readonly IRatingRopository ratingRopository;
     private readonly ILangSocialsDbUnitOfWork unitOfWork;
     private readonly ILocationRepository locationRepository;
     private readonly IUserRepository userRepository;
 
-    public RatingRequestHandler(IRatingRopository ratingRopository, ILangSocialsDbUnitOfWork unitOfWork, ILocationRepository locationRepository, IUserRepository userRepository)
+    public RatingRequestHandler(ILangSocialsDbUnitOfWork unitOfWork, ILocationRepository locationRepository, IUserRepository userRepository)
     {
-        this.ratingRopository = ratingRopository;
         this.unitOfWork = unitOfWork;
         this.locationRepository = locationRepository;
         this.userRepository = userRepository;
@@ -30,7 +28,7 @@ public class RatingRequestHandler : IRequestHandler<RatingRequest, Result>
         if (user is null)
             return Result.Fail(new UnhandledError());
 
-        var location = locationRepository.Find(request.LocationId, cancellationToken);
+        var location = await locationRepository.Find(request.LocationId, cancellationToken);
         if (location is null)
             return Result.Fail(new UnhandledError());
 
@@ -38,11 +36,12 @@ public class RatingRequestHandler : IRequestHandler<RatingRequest, Result>
         {
             RatingValue = request.RatingValue,
             Comment = request.Comment,
-            LocationId = request.LocationId,
             UserId = request.UserId
         };
 
-        await ratingRopository.Create(vote, cancellationToken);
+        location.AddNewRating(vote);
+
+        locationRepository.Update(location);
         await unitOfWork.SaveChagnes(cancellationToken);
 
         return Result.Ok();
@@ -53,7 +52,7 @@ public class RatingRequestValidator : AbstractValidator<RatingRequest>
 {
     public RatingRequestValidator()
     {
-        RuleFor(rt => rt.RatingValue).NotEmpty();
+        RuleFor(rt => rt.RatingValue).InclusiveBetween(1, 100);
         RuleFor(rt => rt.Comment).MinimumLength(3).MaximumLength(200);
     }
 }

@@ -1,6 +1,6 @@
-﻿using Application.Common.LangSocialsDb;
+﻿using AgileObjects.AgileMapper;
+using Application.Common.LangSocialsDb;
 using Application.Common.MediatrExtensions;
-using AutoMapper;
 using FluentResults;
 
 namespace Application.UseCases.SocialEvents.GetSocialEvents;
@@ -22,11 +22,11 @@ public class GetSocialEventsRequestHandler : IResultRequestHandler<GetSocialEven
     {
         var queriedEvents = await socialEventsRepository.QuerySocialEvents(request.CityFilter, request.StateFilter, cancellationToken: cancellationToken);
 
-        var mappedEvents = mapper.Map<IEnumerable<GetSocialEventsResponse>>(queriedEvents); // TODO: Implementar mapa
+        var mappedEvents = mapper.Map(queriedEvents).ToANew<IEnumerable<GetSocialEventsResponse>>(); // TODO: Implementar mapa
 
-        return Result.Ok(mappedEvents);
+        return mappedEvents.ToResult();
     }
 }
 
 
-public record GetSocialEventsResponse(string placeId, int eventId);
+public record GetSocialEventsResponse(int Id, int LocationId);
