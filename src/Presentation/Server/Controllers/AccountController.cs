@@ -38,7 +38,6 @@ public class AccountController : ControllerBase
     }
 
     [HttpPost]
-    [Authorize]
     public async Task<IResult> RegisterAccount(RegistrationRequest request, CancellationToken cancellationToken)
     {
         var result = await sender.Send(request, cancellationToken);
